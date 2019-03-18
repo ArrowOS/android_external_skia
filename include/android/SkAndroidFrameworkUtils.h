@@ -9,12 +9,10 @@
 #define SkAndroidFrameworkUtils_DEFINED
 
 #include "SkTypes.h"
-#include "SkRefCnt.h"
 
 #ifdef SK_BUILD_FOR_ANDROID_FRAMEWORK
 
 class SkCanvas;
-class SkSurface;
 
 /**
  *  SkAndroidFrameworkUtils expose private APIs used only by Android framework.
@@ -33,8 +31,6 @@ public:
      */
     static bool clipWithStencil(SkCanvas* canvas);
 #endif //SK_SUPPORT_GPU
-
-    static sk_sp<SkSurface> getSurfaceFromCanvas(SkCanvas* canvas);
 
     static void SafetyNetLog(const char*);
 };
